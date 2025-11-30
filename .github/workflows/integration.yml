@@ -1,0 +1,14 @@
+name: CI Pipeline
+
+on: push  # Trigger: whenever code is pushed
+
+jobs:
+  build:
+    runs-on: ubuntu-latest   # The machine
+
+    steps:
+      - name: Checkout Repo
+        uses: actions/checkout@v4
+
+      - name: Run a Script
+        run: echo "Hello GitHub Actions!"
